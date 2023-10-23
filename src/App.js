@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 
 import Login from './Login';
 import AddFriend from './AddFriend';
+import FriendsList from './FriendsList';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <div className={'title'} style={{display: 'inline'}} >FRIENDS DATABASE</div>
         <span className='navButtons' >
           <Link to={'/login'} >LOGIN.</Link>
-          <span>FRIENDLIST.</span>
+          <Link to={'/friendslist'} >FRIENDLIST.</Link>
           <Link to={'/addfriend'} >ADDFRIEND.</Link>
           <span>LOGOUT</span>
         </span>
@@ -20,7 +21,9 @@ function App() {
 
       <Routes>
         <Route path={'/login'} element={<Login/>} />
+        <Route path={'/friendslist'} element={<FriendsList/>} />
         <Route path={'/addfriend'} element={<AddFriend/>} />
+
 
       </Routes>
 
