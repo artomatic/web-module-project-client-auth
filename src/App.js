@@ -14,7 +14,7 @@ function App() {
         <span className='navButtons' >
           <Link to={'/login'} >LOGIN.</Link>
           <Link to={'/friendslist'} >FRIENDLIST.</Link>
-          <Link to={'/addfriend'} >ADDFRIEND.</Link>
+          <Link to={'/friends/add'} >ADDFRIEND.</Link>
           <span>LOGOUT</span>
         </span>
       </nav>
@@ -23,7 +23,7 @@ function App() {
         <Route path={'/'} element={<Login/>} />
         <Route path={'/login'} element={<Login />} />
         <Route path={'/friendslist'} element={<FriendsList/>} />
-        <Route path={'/addfriend'} element={<AddFriend/>} />
+        <Route path={'/friends/add'} element={<AddFriend/>} />
       </Routes>
 
     </div>

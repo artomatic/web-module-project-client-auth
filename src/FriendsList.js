@@ -12,7 +12,7 @@ function FriendsList (props) {
                 setFriends(res.data)
             })
             .catch (error => {
-                console.log(error.response.data)
+                console.log(error)
             })
     }, [])
 
