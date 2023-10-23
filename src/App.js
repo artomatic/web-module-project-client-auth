@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import { Route, Routes, Link, Navigate} from 'react-router-dom';
 
 import Login from './Login';
 import AddFriend from './AddFriend';
@@ -20,11 +20,10 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path={'/login'} element={<Login/>} />
+        <Route path={'/'} element={<Login/>} />
+        <Route path={'/login'} element={<Login />} />
         <Route path={'/friendslist'} element={<FriendsList/>} />
         <Route path={'/addfriend'} element={<AddFriend/>} />
-
-
       </Routes>
 
     </div>

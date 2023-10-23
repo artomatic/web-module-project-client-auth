@@ -6,7 +6,7 @@ function FriendsList (props) {
             <h1>FRIENDS LIST</h1>
 
             {[1, 2, 3].map(friend => {
-                return <div key={friend} >friend</div>
+                return <div key={friend} >name - age - email</div>
             })}  
         </div>
     )
