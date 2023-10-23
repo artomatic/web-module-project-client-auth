@@ -5,9 +5,7 @@ import axios from 'axios';
 function Login (props) {
 
     const [credentials, setCredentials] = useState({username: '', password: ''})
-
     const navigate = useNavigate();
-
     const handleChange = (event) => {
         setCredentials({...credentials, [event.target.id]: event.target.value})
     }
@@ -25,18 +23,21 @@ function Login (props) {
             })
     }
     return (
-        <div>
+        <div className='loginWrapper' >
             <h1>LOGIN</h1>
             <form onSubmit={onSubmit}>
                 <div>
                     <label htmlFor='username'>USERNAME</label>
-                    <input id='username' onChange={handleChange} ></input>
+                    <input className='blackbox' id='username' onChange={handleChange} ></input>
                 </div>
                 <div>
                     <label htmlFor='password'>PASSWORD</label>
-                    <input id='password' type='password' onChange={handleChange}></input>
+                    <input className='blackbox' id='password' type='password' onChange={handleChange}></input>
                 </div>
-                <button type='submit' >SUBMIT</button>
+                <div>
+                    <button type='submit' className='blackbox' >SUBMIT</button>
+                </div>
+                
             </form>        
         </div>
     )

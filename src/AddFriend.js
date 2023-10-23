@@ -1,13 +1,11 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
- 
+import { useNavigate, Navigate } from 'react-router-dom';
 
-function AddFriend (props) {
-
+function AddFriend () {
+    if (!localStorage.getItem('token')) return <Navigate to={'/login'} />
     const navigate = useNavigate();
     const [newFriend, setNewFriend] = useState({})
-
     const handleChange = (event) => { 
         setNewFriend ( {
             ...newFriend,
@@ -15,7 +13,6 @@ function AddFriend (props) {
             [event.target.id]: event.target.value
         })
     }
-
     const onSubmit = (event) => {
         event.preventDefault();
         console.log(newFriend)
@@ -35,23 +32,25 @@ function AddFriend (props) {
     }
     return (
         <div>
-            <h1>ADD FRIEND</h1>
-            <form onSubmit={onSubmit}>
-                <div>
-                    <label htmlFor='friendName'>FRIEND NAME</label>
-                    <input id='name' onChange={handleChange} ></input>
-                </div>
-                <div>
-                    <label htmlFor='age'>FRIEND AGE</label>
-                    <input id='age' onChange={handleChange}></input>
-                </div>
-                <div>
-                    <label htmlFor='email'>FRIEND EMAIL</label>
-                    <input id='email' onChange={handleChange}></input>
-                </div>
-                <button type='submit' >SUBMIT</button>
-            </form>        
-        </div>
+        <h1>ADD FRIEND</h1>
+        <form onSubmit={onSubmit}>
+            <div>
+                <label htmlFor='friendName'>FRIEND NAME</label>
+                <input className='blackbox' id='name' onChange={handleChange} ></input>
+            </div>
+            <div>
+                <label htmlFor='age'>FRIEND AGE</label>
+                <input className='blackbox' id='age' onChange={handleChange}></input>
+            </div>
+            <div>
+                <label htmlFor='email'>FRIEND EMAIL</label>
+                <input className='blackbox' id='email' onChange={handleChange}></input>
+            </div>
+            <div>
+                <button className='blackbox' type='submit' >SUBMIT</button>
+            </div>
+        </form>        
+    </div>
     )
 }
 
