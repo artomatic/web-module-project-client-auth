@@ -11,7 +11,7 @@ function AddFriend (props) {
     const handleChange = (event) => { 
         setNewFriend ( {
             ...newFriend,
-            id: 1,
+            id: Date.now(),
             [event.target.id]: event.target.value
         })
     }
