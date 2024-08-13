@@ -7,7 +7,7 @@
 }
 
 .title {
-  padding: 1em;
+  padding: 1.5rem;
 }
 
 nav {
@@ -26,6 +26,15 @@ nav {
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin: 3px;
+  margin-top: 9px;
+  height: 18px;
+
+  transition: all 0.3s ease;
+}
+
+.navButtons a:hover {
+  background-color: gray;
+  scale: 1.05;
 }
 
 .navButtons a:visited {
@@ -58,6 +67,7 @@ span {
 
 h1 {
   font-size: 4em;
+  margin: 6rem;
 }
 
 form {
@@ -80,6 +90,16 @@ form>div {
   background-color: black;
   font-weight: bold;
 
+  transition: all 0.3s ease;
+}
+
+.blackbox:hover {
+  scale: 1.05;
+  background-color: gray;
+}
+
+.submit {
+  margin-top: 15px;
 }
 
 .friendlist {

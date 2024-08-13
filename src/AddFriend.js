@@ -47,7 +47,7 @@ function AddFriend () {
                 <input className='blackbox' id='email' onChange={handleChange}></input>
             </div>
             <div>
-                <button className='blackbox' type='submit' >SUBMIT</button>
+                <button className='blackbox submit' type='submit' >SUBMIT</button>
             </div>
         </form>        
     </div>
