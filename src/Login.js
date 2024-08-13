@@ -35,7 +35,7 @@ function Login (props) {
                     <input className='blackbox' id='password' type='password' onChange={handleChange}></input>
                 </div>
                 <div>
-                    <button type='submit' className='blackbox' >SUBMIT</button>
+                    <button type='submit' className='blackbox submit' >SUBMIT</button>
                 </div>
                 
             </form>        
